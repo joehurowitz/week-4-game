@@ -90,7 +90,7 @@
 
 			});
 
-			}
+			} //close function init()
 
 
 
