@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	<meta charset="UTF-8">
+	<title>Crystals Collector</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	 
+	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	
+	</head>
+
+	<body>
+		<div class="container">	
+			<div class="row">
+				<div class="col-lg-6">
+
+
+				<div id="CrystalsCollector">
+				<h1>CrystalCollector!</h1>
+				</div>
+
+				<div id="rules">
+				<h3>
+				You will be given a random number at the beginning of the game.
+				<br>
+				There are four crystals below.By clicking on a crystal you will add a specific amount of points to your total score.
+				<br>
+				You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.
+				<br>
+				The value of each crystal is hidden from you until you click on it.
+				<br>
+				Each time when the game starts, the game will change the value of each crystal.
+				</h3>
+
+				</div>
+				
+					<div class="panel panel-default">
+						<div class="panel-body">
+						
+						<div id="display-random">
+						</div>
+						</div>
+						</div>
+				
+
+						<div class="panel panel-default">
+						<div class="panel-body">
+
+
+						<div id="wins-losses"> 
+						</div>
+
+						</div>
+					 </div>
+				
+				
+
+				<div class="panel panel-default">
+				
+					<div class="panel-body">
+
+				<div class="inner">
+						
+						<img class ="pink-box" src="assets/images/pink.jpg">
+	
+				</div>
+
+				<div class="inner">	
+						
+						<img class="blue-diamond" src="assets/images/blue.jpg"> 
+						
+				</div>
+					
+				<div class="inner">
+						<img class="yellow-octogon" src="assets/images/yellow.jpg">
+					
+				</div>	
+					
+				<div class="inner">
+				
+					<img class="green-rectangle" src="assets/images/green.jpg">
+					
+				</div>
+
+					
+				</div><!--panel body close-->	
+				</div>
+
+						<div> <h3>Your Total Score is :</h3></div>
+
+
+
+					<div id="display-score">
+				</div>
+
+
+				</div><!--col close-->
+	
+				<div class="col-lg-6">
+
+
+
+				</div>
+			
+		</div> <!--row close-->
+
+
+		</div><!--container close-->
+
+
+
+			<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+		</body>
+		</html>
