@@ -3,7 +3,6 @@
 			
 		$(document).ready(function() {
 
-			//var trackLosses = 0;
 			var wins = 0;
 			var losses = 0;
 			var random = Math.floor((Math.random()*120)+19);
@@ -18,21 +17,21 @@
 			$("#display-random").html(random);
 			init();
 
-			function init(){
+			function init(){ //console.log("initialize ");
 
 			$(".pink-box").on("click", function (){
 				total = total + pinkRandom;
 				$("#display-score").html(total);
 
-					if(total > random){ 
+				if(total > random){ 
 				 losses = losses + 1; 
-				$("#wins-losses").html("Losses : " + losses);
-				
+				$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 				else if(total === random){
 					 wins = wins + 1;
-					$("#wins-losses").html("Wins : " + wins);
-				
+					 $("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 
 			});
@@ -44,14 +43,14 @@
 
 				 if(total > random){
 				 losses = losses + 1; 
-				$("#wins-losses").html("Losses : " + losses);
-				
+				$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 
 				else if(total === random){
 					 wins = wins + 1;
-					$("#wins-losses").html("Wins : " + wins);
-				
+					$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 
 			});
@@ -62,13 +61,13 @@
 
 				if(total > random){
 				 losses = losses + 1; 
-				$("#wins-losses").html("Losses : " + losses);
-				
+				$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 				else if(total === random){
 					 wins = wins + 1;
-					$("#wins-losses").html("Wins : " + wins);
-				
+					$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 
 			});
@@ -79,19 +78,29 @@
 			
 				 if(total > random){
 				 losses = losses + 1; 
-				$("#wins-losses").html("Losses : " + losses);
-				
+				$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 				else if(total === random){
 					 wins = wins + 1;
-					$("#wins-losses").html("Wins : " + wins);
-				
+					$("#wins-losses").html("Losses : " + losses + " Wins : " + wins);
+				resetGame();
 				}
 
 			});
 
 			} //close function init()
 
+			function resetGame(){
+				random = Math.floor((Math.random()*120)+19);
+				$("#display-random").html(random);
 
+				total = 0;
+				$("#display-score").html(total);
+
+				//console.log("Wins : " + wins);
+				//console.log("Losses : " + losses);
+
+			}
 
 		});
